@@ -1,5 +1,5 @@
 import { THIRTHY_ONE } from '../constants/numbers';
-import { CheckDate } from '../types';
+import type { CheckDate } from '../types';
 
 const isThirtyOne: CheckDate = (year, month) => {
   const date = new Date(year, month, THIRTHY_ONE);

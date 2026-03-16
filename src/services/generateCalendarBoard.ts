@@ -1,7 +1,7 @@
 import {
   ONE, SEVEN, ZERO,
 } from '../constants/numbers';
-import { CalendarBoard } from '../types';
+import type { CalendarBoard } from '../types';
 import generateBoard from './helper/generateBoard';
 import getLastDay from './helper/getLastDay';
 

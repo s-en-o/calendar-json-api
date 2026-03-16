@@ -1,5 +1,5 @@
 import { monthNowCalendar } from '../services';
-import { Handler } from '../types';
+import type { Handler } from '../types';
 import { OK } from '../constants/status';
 
 const getCalendarNow: Handler = (_req, res, next) => {

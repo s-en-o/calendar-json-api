@@ -1,4 +1,4 @@
-import { ErrorRequestHandler } from 'express';
+import type { ErrorRequestHandler } from 'express';
 import { INTERNAL_SERVER_ERROR } from '../constants/status';
 import { INTERNAL_ERROR } from '../errors';
 

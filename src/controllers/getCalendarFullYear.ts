@@ -1,6 +1,6 @@
 import { OK } from '../constants/status';
 import { fullYearCalendar } from '../services';
-import { Dateyear, Handler } from '../types';
+import type { Dateyear, Handler } from '../types';
 
 const getCalendarFullYear: Handler = (req, res, next) => {
   try {

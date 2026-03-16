@@ -1,7 +1,7 @@
 import { defaultYear } from '../constants/defaultDate';
 import { FOUR } from '../constants/numbers';
 import { INVALID_YEAR } from '../errors';
-import { Handler } from '../types';
+import type { Handler } from '../types';
 
 const validationYear: Handler = (req, _res, next) => {
   const { query, params } = req;

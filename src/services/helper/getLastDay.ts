@@ -1,5 +1,5 @@
 import { THIRTHY_ONE } from '../../constants/numbers';
-import { LastDay } from '../../types';
+import type { LastDay } from '../../types';
 
 const getLastDay: LastDay = (year, month) => {
   let day = THIRTHY_ONE;

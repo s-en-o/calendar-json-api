@@ -1,5 +1,5 @@
 import { monthCalendar } from '../services';
-import { DateCompleted, Handler } from '../types';
+import type { DateCompleted, Handler } from '../types';
 import { OK } from '../constants/status';
 
 const getCalendarByMonth: Handler = (req, res, next) => {

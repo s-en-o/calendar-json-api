@@ -1,7 +1,7 @@
 import monthNames from '../constants/names';
 import { ZERO } from '../constants/numbers';
 import { INVALID_MONTH } from '../errors';
-import { Handler } from '../types';
+import type { Handler } from '../types';
 
 const validationMonth: Handler = (req, _res, next) => {
   const monthName = req.params.monthName as string;
