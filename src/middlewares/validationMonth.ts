@@ -4,7 +4,7 @@ import { INVALID_MONTH } from '../errors';
 import { Handler } from '../types';
 
 const validationMonth: Handler = (req, _res, next) => {
-  const { monthName } = req.params;
+  const monthName = req.params.monthName as string;
   const monthPosition = monthNames.indexOf(monthName.toLowerCase());
 
   if (monthPosition < ZERO) return next(INVALID_MONTH);
