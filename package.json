@@ -1,8 +1,7 @@
 {
   "name": "calenderjsonapi",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "type": "module",
   "keywords": [
     "calendar",
@@ -12,11 +11,10 @@
   ],
   "scripts": {
     "test": "jest",
-    "dev": "ts-node-dev --respawn --ignore-watch src/node_modules --transpile-only src index.ts",
+    "dev": "tsx --watch src/index.ts",
     "start": "node dist/index.js",
-    "postinstall": "tsc",
-    "watch-node": "nodemon dist/index.js",
-    "watch-ts": "tsc -w"
+    "build": "pkgroll",
+    "watch-node": "nodemon dist/index.js"
   },
   "author": "David Gonzaga",
   "license": "ISC",
@@ -45,7 +43,8 @@
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.25.3",
     "jest": "^30.3.0",
-    "ts-node-dev": "^1.1.8",
+    "pkgroll": "^2.27.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }

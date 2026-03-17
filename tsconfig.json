@@ -2,14 +2,18 @@
   "compilerOptions": {
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "preserve",
+    "moduleResolution": "bundler",
     "target": "esnext",
     "types": ["jest", "node"],
     // For nodejs:
     // "lib": ["esnext"],
 
-    // and npm install -D @types/node
+    // Treat files as modules even if it doesn't use import/export
+    // Allow JSON modules to be imported
+    "resolveJsonModule": true,
+    // Allow JS files to be imported from TS and vice versa
+    "allowJs": true,
 
     // File Layout
     "rootDir": "./src",
@@ -39,7 +43,12 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true, // or `emitDeclarationOnly`
+    "allowImportingTsExtensions": true,
+    "allowArbitraryExtensions": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "eslint.config.ts"]
